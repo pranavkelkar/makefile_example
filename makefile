@@ -1,16 +1,20 @@
+# makefile for hello
+CC=gcc
+CFLAGS=-c -Wall
+
 all: hello
 
 hello: main.o factorial.o hello.o
-	gcc main.o factorial.o hello.o -o hello
+	$(CC) main.o factorial.o hello.o -o hello
 
 main.o: main.c
-	gcc -c main.c
+	$(CC) $(CFLAGS) main.c
 
 factorial.o: factorial.c
-	gcc -c factorial.c
+	$(CC) $(CFLAGS) factorial.c
 
 hello.o: hello.c
-	gcc -c hello.c
+	$(CC) $(CFLAGS) -c hello.c
 
 clean:
 	rm *.o hello
