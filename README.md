@@ -1,2 +1,6 @@
 # makefile_example
-Makefile example
+
+## Manual compilation
+```
+gcc main.c hello.c factorial.c
+```
